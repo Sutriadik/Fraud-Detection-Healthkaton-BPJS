@@ -1,0 +1,36 @@
+data:
+  raw_main_path: "data/raw/sampling_healtkathon2022.parquet"
+  raw_diagnosa_path: "data/raw/sampling_healthkathon2022_diagnosa.parquet"
+  raw_procedure_path: "data/raw/sampling_healthkathon2022_procedure.parquet"
+  processed_dir: "data/processed"
+  sample_fraction: 0.02
+  random_seed: 42
+
+model:
+  save_dir: "models"
+  model_path: "models/final_model.joblib"
+  preprocessor_path: "models/preprocessor_pipeline.joblib"
+  metadata_path: "models/model_metadata.json"
+  threshold: 0.7868109
+
+  xgboost_params:
+    n_estimators: 1000
+    colsample_bytree: 0.5
+    gamma: 0
+    learning_rate: 0.05377367769556463
+    max_depth: 64
+    reg_alpha: 1.8796306666826916
+    reg_lambda: 0.01
+    subsample: 1.0
+    min_child_weight: 1
+    verbosity: 1
+    n_jobs: -1
+    tree_method: "approx"
+
+  smote_params:
+    sampling_strategy: 0.19676221847208702
+    k_neighbors: 858
+    n_jobs: -1
+
+  rus_params:
+    sampling_strategy: 0.8849275028627146
