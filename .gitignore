@@ -71,8 +71,6 @@ app/Home.py.goutputstream
 data/raw/*.parquet
 data/processed/*.parquet
 data/processed/*.csv
-models/*.joblib
-models/*.pkl
 answer.csv
 *parsed.md
 parse_notebooks.py
