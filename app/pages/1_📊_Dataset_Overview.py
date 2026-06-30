@@ -442,8 +442,9 @@ with tab3:
     with col_cost2:
         fig, ax = plt.subplots(figsize=(8, 4.5))
         data_box = [df_filtered[df_filtered['label']==0]['biaya'], df_filtered[df_filtered['label']==1]['biaya']]
-        bp = ax.boxplot(data_box, labels=['Bukan Fraud (0)', 'Fraud (1)'], patch_artist=True, widths=0.5,
+        bp = ax.boxplot(data_box, patch_artist=True, widths=0.5,
                        medianprops=dict(color='white', linewidth=2))
+        ax.set_xticklabels(['Bukan Fraud (0)', 'Fraud (1)'])
         bp['boxes'][0].set_facecolor('#38bdf8')
         bp['boxes'][0].set_alpha(0.5)
         bp['boxes'][1].set_facecolor('#f43f5e')
